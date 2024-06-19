@@ -63,7 +63,7 @@ def recognize_intent(request: IntentRequest):
             openai_message = openai_response.choices[0].message.content.strip()
             return {
                 "recognized_intent": recognized_intent,
-                "openai_response": openai_message,
+                "message": openai_message,
             }
         else:
             return {
